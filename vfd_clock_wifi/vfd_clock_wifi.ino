@@ -27,8 +27,13 @@
 
   The sketch can read temperature from a I2C LM75 or SE95D sensor. Don't forget to provide
   pull-up resistors for SDA (GPIO21) and SCL (GPIO22). 3k3 or 4k7 resistors work well. The
-  I2C bus operates at 3.3V.
+  I2C bus operates at 3.3V. (The VFD board does provide the pull-ups, the interface is 
+  available at connector K7)
 
+  If a BM*280 sensor is connected and enabled, its temperature readings will be used and 
+  supersed other sensors. BM*280 sensors are easily available on breakout boards. The 
+  sensor is simply connected via the I2C interface K7 (take care not to confuse the signals 
+  as some boards have a different pinout than the connector K7)                                                                                                                                                      
   This sketch listens to incoming commands on the serial port (115200 baud). A command
   is processed when a CR (13) or LF (10) character arrives. The commands are processed in
   the cmd_proc module. See the module's source for an overview of the available commands.
@@ -43,10 +48,9 @@
     Version 1.5.0
     http://www.pjrc.com/teensy/td_libs_Time.html
 
- - Timezone by Jack Christensen
+  - Timezone by Jack Christensen
     Version 1.2.2  (Warning about architecture mismatch can be ignored)
     https://github.com/JChristensen/Timezone
-
 
   - BME280 by Tyler Glenn
     Version 2.3.0
