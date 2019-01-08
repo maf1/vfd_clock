@@ -14,8 +14,8 @@ The following features are added::
 * New commands "help" and "system status"
 * Show firmware revision at boot time
 
-If a BM\*280 sensor is connected and enabled, its temperature readings will used and supersed other sensors.
-BM\*280 sensors are easily available on breakout boards. The sensor is simply connected via the I2C interface K7 (take care not to confuse the signals as some boards have a different pinout than the connector K7). No further circuitry is necessary, as signal levels match and pull-ups are provided by the VFD clock board.
+If a BM\*280 sensor is connected and enabled, its temperature readings will be used and supersede other sensors.
+BM\*280 sensors are easily available on breakout boards. The sensor is simply connected via the I2C interface K7 (nomenclature as printed on the board and used in the elektor article - the schematics published on the project page labels this as K6 - take care not to confuse signals as some boards have a different pinout than the connector). No further circuitry is necessary, as signal levels match and pull-ups are provided by the VFD clock board.
 
 In addition to the Time library, this version needs the following modules (use the Arduino Library manager to load them if unavailable): 
 
