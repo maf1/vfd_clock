@@ -1,0 +1,44 @@
+wifi set ssid "<your-wifi-ssid>"
+wifi set password "<your-wifi-password>"
+wifi set local  <your-device-ip>
+wifi set subnet 255.255.255.0
+wifi set gateway <your-gw-ip> 
+wifi set dns 1 <your-dns-ip> 
+wifi set dns 2 0.0.0.0
+wifi set method static
+wifi set hostname “vfdclock”
+serial set echocmd yes
+cs set echocmd no
+ntp set hostname "pool.ntp.org"
+ntp set addr 0.0.0.0
+ntp set method hostname
+owtemp set enabled no
+lm75 set enabled no
+lm75 set adsel 0
+bme280 set enabled yes
+clock set adjust + 00 00 00
+clock set usedst yes
+clock set showdate yes
+clock set dateformat dmy
+clock set datesepmode off
+clock set hourformat 24
+clock set hourlz yes
+clock set timesepmode blink
+clock set showtemp yes
+clock set tempformat celsius
+rgb set grad id 1
+rgb set solid id 17
+rgb set sleep raw 0 0 0
+rgb set method grad
+rgb set grad apply
+rgb set solid raw 0 0 0
+rgb set method solid
+rgb set solid apply
+main set wificonnect yes
+main set ntprequest yes
+main set ntprefresh 01 00 00
+main set cmdsrvstart yes
+main set sleeptime 01 00 00
+main set wakeuptime 06 30 00
+main set sleepmode yes
+settings write
